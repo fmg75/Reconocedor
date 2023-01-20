@@ -7,7 +7,7 @@ class FaceNetModels:
     def __init__(self):
         self.model = InceptionResnetV1(pretrained='vggface2').eval()
         self.mtcnn = MTCNN(min_face_size = 50, keep_all = False)
-        with open('appRostros/caracteristica_15K.pkl', "rb") as f:
+        with open('appRostros/caracteristica_16K.pkl', "rb") as f:
             self.caracteristicas = pickle.load(f)
 
     def embedding(self,img):
